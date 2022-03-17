@@ -13,6 +13,9 @@ $font-secondary: "Rubik", sans-serif;
 //SHADOW
 $shadow: rgba(0, 0, 0, 0.248) 0rem 0.1rem 0.2rem;
 
+//Transition
+$transition: all ease-in 0.2s;
+
 *,
 *::after,
 *::before {
@@ -85,6 +88,7 @@ body {
       &:first-child {
         background-color: $soft-blue;
         color: $color-default;
+        transition: $transition;
 
         &:hover {
           background-color: $color-default;
@@ -96,6 +100,7 @@ body {
       &:last-child {
         background-color: $color-default;
         color: $grayish-blue;
+        transition: $transition;
 
         &:hover {
           color: $grayish-blue;
@@ -146,6 +151,7 @@ body {
         border: none;
         color: $color-default;
         box-shadow: $shadow;
+        transition: $transition;
 
         &:hover {
           background-color: $color-default;
