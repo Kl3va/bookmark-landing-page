@@ -1,13 +1,173 @@
+//PRIMARY COLORS
+$soft-blue: hsl(231, 69%, 60%);
+$soft-red: hsl(0, 94%, 66%);
+$color-default: #fff;
+
+//Neutral
+$grayish-blue: hsl(229, 8%, 60%);
+$very-dark-blue: hsl(229, 31%, 21%);
+
+//FONT
+$font-secondary: "Rubik", sans-serif;
+
+//SHADOW
+$shadow: rgba(0, 0, 0, 0.247) 0rem 0.1rem 0.2rem;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 112.5%; //18px
+}
+
 body {
-  font-size: large;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-color: rgb(226, 140, 28);
+  font-family: $font-secondary;
+  font-weight: 400;
+  background-color: $color-default;
+  color: $very-dark-blue;
+  line-height: 1.3;
+  max-width: 100%;
 }
 
-h1 {
-  font-size: medium;
+//HEADER
+.header {
+  padding: 0 Min(10vw, 7rem);
+  margin: 2.5rem 0;
 }
 
-.graph {
-  color: rgb(27, 16, 16);
+//SUB-HEADER
+.subHeader {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &__primary {
+    max-width: 50%;
+    align-self: center;
+
+    & h1 {
+      //font-size: 4vw;
+      font-size: calc(#{1rem} + 1.5vw);
+      max-width: 27rem;
+      margin-bottom: 1rem;
+    }
+
+    & p {
+      font-size: calc(#{0.5rem} + 0.7vw); //0.9rem;
+      color: $grayish-blue;
+      max-width: 28rem;
+      margin-bottom: 1rem;
+    }
+
+    .subHeader-btns {
+      display: flex;
+      width: 16.4rem;
+      height: 1.9rem;
+      justify-content: space-between;
+    }
+
+    .btn {
+      padding: 0 1rem;
+      font-family: inherit;
+      border: none;
+      text-align: center;
+      border-radius: 0.2rem;
+      box-shadow: $shadow;
+      cursor: pointer;
+
+      &:first-child {
+        background-color: $soft-blue;
+        color: $color-default;
+
+        &:hover {
+          background-color: $color-default;
+          color: $soft-blue;
+          border: 2px solid $soft-blue;
+        }
+      }
+
+      &:last-child {
+        background-color: $color-default;
+        color: $grayish-blue;
+
+        &:hover {
+          color: $grayish-blue;
+          border: 2px solid $grayish-blue;
+        }
+      }
+    }
+  }
+
+  &__img {
+    max-width: 50%;
+    margin-right: -2.5rem;
+    //flex: 0 1 100%;
+
+    & img {
+      display: block;
+      height: auto;
+      //width: 30rem;
+      width: 105%;
+      //margin-right: -.5rem;
+    }
+  }
+}
+
+//NAVIGATION
+.nav {
+  display: flex;
+  height: 1.7rem;
+  justify-content: space-between;
+
+  &__logo {
+    height: 25px;
+    align-self: center;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 25rem;
+    list-style-type: none;
+
+    li {
+      flex: 0 1 22%;
+
+      &:last-child a {
+        background-color: $soft-red;
+        border-radius: 0.2rem;
+        border: none;
+        color: $color-default;
+        box-shadow: $shadow;
+
+        &:hover {
+          background-color: $color-default;
+          border: 2px solid $soft-red;
+          color: $soft-red;
+        }
+      }
+
+      &:not(:last-child) a:hover {
+        color: $soft-red;
+      }
+
+      a {
+        display: block;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-decoration: none;
+        //background-color: $soft-red;
+        padding: 0.4rem 0.5rem;
+        text-align: center;
+      }
+    }
+  }
 }
