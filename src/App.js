@@ -7,7 +7,9 @@ function App() {
   return (
     <>
       <Header />
-      <Features {...features} />
+      <main className="main">
+        <Features {...features} />
+      </main>
     </>
   );
 }

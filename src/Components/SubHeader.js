@@ -10,8 +10,12 @@ const SubHeader = ({ SubHeader }) => {
         <h1>{h1}</h1>
         <p>{p}</p>
         <div className="subHeader-btns">
-          {button.map((btn) => {
-            return <button className="btn">{btn}</button>;
+          {button.map((btn, index) => {
+            return (
+              <button key={index} className="btn">
+                {btn}
+              </button>
+            );
           })}
         </div>
       </div>

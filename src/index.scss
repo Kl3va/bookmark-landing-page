@@ -16,6 +16,13 @@ $shadow: rgba(0, 0, 0, 0.248) 0rem 0.1rem 0.2rem;
 //Transition
 $transition: all ease-in 0.2s;
 
+//MIXIN
+@mixin alignItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 *,
 *::after,
 *::before {
@@ -178,15 +185,18 @@ body {
   }
 }
 
+//MAIN
+.main {
+  padding: 0 Min(10vw, 7rem);
+}
+
 //FEATURES SECTION
 .section {
-  padding: 0 Min(10vw, 7rem);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include alignItems(); //Aligns items horizontally along cross axis
 
   .secondary-heading {
     width: 70%;
+    @include alignItems(); //Aligns items horizontally along cross axis
 
     h2 {
       text-align: center;
@@ -197,7 +207,30 @@ body {
       font-size: calc(#{0.5rem} + 0.7vw);
       color: $grayish-blue;
       max-width: 29rem;
-      justify-content: center;
+    }
+  }
+
+  .btn-group {
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+
+    .features-btn {
+      border: none;
+      padding: 1.5rem 0;
+      flex: 0 1 12rem;
+      font-size: 0.9rem;
+      font-family: inherit;
+      font-weight: 400;
+      align-self: auto;
+      background-color: $color-default;
+      transition: all ease-in-out 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        color: $soft-red;
+      }
     }
   }
 }
