@@ -190,47 +190,97 @@ body {
   padding: 0 Min(10vw, 7rem);
 }
 
+//Sub-heading
+.secondary-heading {
+  width: 70%;
+  @include alignItems(); //Aligns items horizontally along cross axis
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    font-size: calc(#{0.5rem} + 0.7vw);
+    color: $grayish-blue;
+    max-width: 29rem;
+  }
+}
+
 //FEATURES SECTION
 .section {
   @include alignItems(); //Aligns items horizontally along cross axis
+  margin: 4rem 0;
+}
 
-  .secondary-heading {
-    width: 70%;
-    @include alignItems(); //Aligns items horizontally along cross axis
+.btn-group {
+  width: 80%;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: 0.5px solid $grayish-blue;
 
-    h2 {
-      text-align: center;
+  .features-btn {
+    border: none;
+    padding: 1.5rem 0;
+    flex: 0 1 12rem;
+    font-size: 0.8rem;
+    font-family: inherit;
+    font-weight: 400;
+    align-self: auto;
+    background-color: $color-default;
+    transition: all ease-in-out 0.2s;
+    cursor: pointer;
+    color: $grayish-blue;
+
+    &:hover {
+      color: $soft-red;
+    }
+
+    &--active {
+      color: $very-dark-blue;
+      border-bottom: 3px solid $soft-red;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  &-img {
+    flex: 0 0 46%;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &-description {
+    flex: 0 0 43%;
+    align-self: center;
+
+    h3 {
+      font-size: calc(#{0.6rem} + 1.2vw);
+      margin-bottom: 1rem;
     }
 
     p {
-      text-align: center;
       font-size: calc(#{0.5rem} + 0.7vw);
       color: $grayish-blue;
-      max-width: 29rem;
+      //max-width: 25rem;
+      margin-bottom: 1rem;
     }
   }
-
-  .btn-group {
-    width: 100%;
-    margin: 2rem 0;
-    display: flex;
-    justify-content: center;
-
-    .features-btn {
-      border: none;
-      padding: 1.5rem 0;
-      flex: 0 1 12rem;
-      font-size: 0.9rem;
-      font-family: inherit;
-      font-weight: 400;
-      align-self: auto;
-      background-color: $color-default;
-      transition: all ease-in-out 0.2s;
-      cursor: pointer;
-
-      &:hover {
-        color: $soft-red;
-      }
-    }
-  }
+}
+//REusable button
+.btn-small {
+  border: none;
+  background-color: $soft-blue;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.8rem;
+  font-family: inherit;
+  color: $color-default;
+  border-radius: 0.2rem;
 }

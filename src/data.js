@@ -2,7 +2,7 @@ import React from "react";
 import imgHeader from "../src/images/illustration-hero.svg";
 import simpleBookmarkingImg from "../src/images/illustration-features-tab-1.svg";
 import speedySearchingImg from "../src/images/illustration-features-tab-2.svg";
-import easySharingImg from "../src/images/illustration-features-tab-2.svg";
+import easySharingImg from "../src/images/illustration-features-tab-3.svg";
 
 export const links = [
   {
