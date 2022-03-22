@@ -81,21 +81,21 @@ export const download = {
   downloadContents: [
     {
       logo: chromeLogo,
-      logoAlt: "chrome logo",
+      logoAlt: "A chrome logo",
       title: "Add to Chrome",
       description: "Minimum version 62",
       btnText: "Add & Install Extension",
     },
     {
       logo: firefoxLogo,
-      logoAlt: "firefox logo",
+      logoAlt: "A firefox logo",
       title: "Add to Firefox",
       description: "Minimum version 55",
       btnText: "Add & Install Extension",
     },
     {
       logo: operaLogo,
-      logoAlt: "opera logo",
+      logoAlt: "An opera logo",
       title: "Add to Opera",
       description: "Minimum version 46",
       btnText: "Add & Install Extension",

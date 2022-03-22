@@ -283,8 +283,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
   grid-template-rows: auto;
-  grid-row-gap: 1.5rem;
-  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.7rem;
+  grid-column-gap: 2.5rem;
 
   .download-content {
     height: 20rem;
