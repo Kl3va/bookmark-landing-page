@@ -1,7 +1,10 @@
 import React from "react";
+import { download, features } from "./data";
+
+//Components
 import Features from "./Components/Features";
 import Header from "./Components/Header";
-import { features } from "./data";
+import Download from "./Components/Download";
 
 function App() {
   return (
@@ -9,6 +12,7 @@ function App() {
       <Header />
       <main className="main">
         <Features {...features} />
+        <Download {...download} />
       </main>
     </>
   );

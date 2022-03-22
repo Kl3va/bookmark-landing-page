@@ -1,8 +1,16 @@
 import React from "react";
+//Image for header section
 import imgHeader from "../src/images/illustration-hero.svg";
+
+//images for features section
 import simpleBookmarkingImg from "../src/images/illustration-features-tab-1.svg";
 import speedySearchingImg from "../src/images/illustration-features-tab-2.svg";
 import easySharingImg from "../src/images/illustration-features-tab-3.svg";
+
+//Images for download section
+import chromeLogo from "../src/images/logo-chrome.svg";
+import firefoxLogo from "../src/images/logo-firefox.svg";
+import operaLogo from "../src/images/logo-opera.svg";
 
 export const links = [
   {
@@ -62,6 +70,35 @@ export const features = {
       description:
         "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
       btnText: "More Info",
+    },
+  ],
+};
+
+//Download.js Data
+export const download = {
+  header: "Download the extension",
+  text: "We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.",
+  downloadContents: [
+    {
+      logo: chromeLogo,
+      logoAlt: "chrome logo",
+      title: "Add to Chrome",
+      description: "Minimum version 62",
+      btnText: "Add & Install Extension",
+    },
+    {
+      logo: firefoxLogo,
+      logoAlt: "firefox logo",
+      title: "Add to Firefox",
+      description: "Minimum version 55",
+      btnText: "Add & Install Extension",
+    },
+    {
+      logo: operaLogo,
+      logoAlt: "opera logo",
+      title: "Add to Opera",
+      description: "Minimum version 46",
+      btnText: "Add & Install Extension",
     },
   ],
 };
