@@ -1,5 +1,5 @@
 import React from "react";
-import { download, features } from "./data";
+import { download, faqData, features } from "./data";
 
 //Components
 import Features from "./Components/Features";
@@ -14,7 +14,7 @@ function App() {
       <main className="main">
         <Features {...features} />
         <Download {...download} />
-        <Faq />
+        <Faq {...faqData} />
       </main>
     </>
   );

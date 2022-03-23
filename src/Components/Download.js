@@ -11,7 +11,10 @@ const Download = ({ downloadContents }) => {
         {downloadContents.map((content, index) => {
           const { logo, logoAlt, title, description, btnText } = content;
           return (
-            <div className={`download-content download-content--${index + 1}`}>
+            <div
+              key={index + 1}
+              className={`download-content download-content--${index + 1}`}
+            >
               <img src={logo} alt={logoAlt} />
               <h3>{title}</h3>
               <p>{description}</p>

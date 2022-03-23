@@ -6,10 +6,11 @@ import Button from "./Button";
 const Features = ({ featuresTitle, featuresContents }) => {
   // const { featuresTitle, featuresContents } = features;
 
-  const [contents, setContents] = useState(featuresContents);
+  // const [contents, setContents] = useState(featuresContents);
   const [value, setValue] = useState(0);
 
-  const { image, imageAlt, title, description, btnText } = contents[value];
+  const { image, imageAlt, title, description, btnText } =
+    featuresContents[value];
   return (
     <section className="section">
       <SecondaryHeader h2={features.header} text={features.text} />
