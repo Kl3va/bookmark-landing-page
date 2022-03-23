@@ -5,6 +5,7 @@ import { download, features } from "./data";
 import Features from "./Components/Features";
 import Header from "./Components/Header";
 import Download from "./Components/Download";
+import Faq from "./Components/Faq";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <main className="main">
         <Features {...features} />
         <Download {...download} />
+        <Faq />
       </main>
     </>
   );
