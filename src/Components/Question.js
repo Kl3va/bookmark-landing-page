@@ -7,7 +7,9 @@ const Question = ({ question, answer }) => {
     <div className="content-box" onClick={() => setText(!text)}>
       <div className="content-box__question">
         <h3>{question}</h3>
-        <MdKeyboardArrowDown className="svg" />
+        <MdKeyboardArrowDown
+          className={`${text ? "svg svg--active" : "svg"}`}
+        />
       </div>
       {text && <p>{answer}</p>}
     </div>

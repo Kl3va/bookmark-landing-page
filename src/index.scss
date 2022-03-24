@@ -35,6 +35,7 @@ $padding-large: 0 1.6rem;
   font-family: inherit;
   color: $color-default;
   border-radius: 0.2rem;
+  box-shadow: $shadow;
 }
 
 @mixin hoverEffect {
@@ -207,7 +208,7 @@ body {
 
 //MAIN
 .main {
-  padding: 0 Min(10vw, 7rem);
+  //padding: 0 Min(10vw, 7rem);
 }
 
 //Sub-heading
@@ -232,9 +233,15 @@ body {
 .section {
   @include alignItems(); //Aligns items horizontally along cross axis
   margin: 6rem 0;
+  padding: 0 Min(10vw, 7rem);
 
   &--3 {
     margin: 8rem 0;
+  }
+
+  &--form {
+    background-color: $soft-blue;
+    color: $color-default;
   }
 }
 
@@ -344,8 +351,8 @@ body {
 //FAQ SECTION
 .faq-box {
   width: 29rem;
-  margin-top: 4rem;
-  //align-self: ;
+  margin: 4rem 0;
+  //margin-bottom: 3rem;
 
   .content-box {
     width: 100%;
@@ -400,4 +407,8 @@ body {
 .svg {
   font-size: 1.5rem;
   color: $soft-blue;
+
+  &--active {
+    color: $soft-red;
+  }
 }

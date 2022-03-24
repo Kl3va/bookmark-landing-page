@@ -4,8 +4,9 @@ import { faqData } from "../data";
 import SubHeader from "./SubHeader";
 import SecondaryHeader from "./SecondaryHeader";
 import Question from "./Question";
+import Button from "./Button";
 
-const Faq = ({ faqContents }) => {
+const Faq = ({ btnText, faqContents }) => {
   // const [text, setText] = useState(false);
 
   return (
@@ -16,6 +17,7 @@ const Faq = ({ faqContents }) => {
           return <Question key={index} {...content} />;
         })}
       </div>
+      <Button className="btn-small" text={btnText} />
     </section>
   );
 };

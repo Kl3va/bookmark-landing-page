@@ -132,4 +132,14 @@ export const faqData = {
         "Chromium browsers are currently in development and scheduled to be released in due time. Our developers are working round the clock to push the final app into production.",
     },
   ],
+  btnText: "More Info",
+};
+
+//Form section data
+export const formData = {
+  text: "35000+ ALREADY JOINED",
+  heading: "Stay up-to-date with what we're doing",
+  btnText: "Contact Us",
+  placeholder: "Enter your email address",
+  errorMessage: "Oops make sure it's an email",
 };
