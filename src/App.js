@@ -1,5 +1,5 @@
 import React from "react";
-import { download, faqData, features, formData } from "./data";
+import { download, faqData, features, formData, footerData } from "./data";
 
 //Components
 import Features from "./Components/Features";
@@ -7,6 +7,7 @@ import Header from "./Components/Header";
 import Download from "./Components/Download";
 import Faq from "./Components/Faq";
 import Form from "./Components/Form";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Faq {...faqData} />
         <Form {...formData} />
       </main>
+      <Footer {...footerData} />
     </>
   );
 }

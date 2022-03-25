@@ -12,6 +12,9 @@ import chromeLogo from "../src/images/logo-chrome.svg";
 import firefoxLogo from "../src/images/logo-firefox.svg";
 import operaLogo from "../src/images/logo-opera.svg";
 
+//Image for footer logo
+import footerLogo from "../src/images/logo-bookmark-footer.svg";
+
 export const links = [
   {
     id: 1,
@@ -142,4 +145,10 @@ export const formData = {
   btnText: "Contact Us",
   placeholder: "Enter your email address",
   errorMessage: "Oops make sure it's an email",
+};
+
+//Footer data
+export const footerData = {
+  logo: footerLogo,
+  footerLink: ["Features", "Pricing", "Contact"],
 };

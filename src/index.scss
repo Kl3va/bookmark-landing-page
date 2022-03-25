@@ -55,6 +55,7 @@ $padding-large: 0 1.6rem;
 html {
   box-sizing: border-box;
   font-size: 112.5%; //18px
+  scroll-behavior: smooth;
 }
 
 body {
@@ -239,17 +240,166 @@ body {
     margin: 8rem 0;
   }
   //Form styling
-  &--form {
-    background-color: $soft-blue;
-    color: $color-default;
-    min-height: 20rem;
+
+  .btn-group {
+    width: 80%;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.5px solid $grayish-blue;
+
+    .features-btn {
+      border: none;
+      padding: 1.5rem 0;
+      flex: 0 1 12rem;
+      font-size: 0.8rem;
+      font-family: inherit;
+      font-weight: 400;
+      align-self: auto;
+      background-color: $color-default;
+      transition: all ease-in-out 0.2s;
+      cursor: pointer;
+      color: $grayish-blue;
+
+      &:hover {
+        color: $soft-red;
+      }
+
+      &--active {
+        color: $very-dark-blue;
+        border-bottom: 3px solid $soft-red;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    &-img {
+      flex: 0 0 46%;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    &-description {
+      flex: 0 0 43%;
+      align-self: center;
+
+      h3 {
+        font-size: calc(#{0.6rem} + 1.2vw);
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: calc(#{0.5rem} + 0.7vw);
+        color: $grayish-blue;
+        //max-width: 25rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  //DOWNLOAD SECTION
+  .downloader {
+    margin-top: 3rem;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-rows: auto;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+
+    .download-content {
+      height: 19rem;
+      padding: 1rem 0;
+      border-radius: 0.4rem;
+      box-shadow: $shadow;
+      background-color: $color-default;
+      @include alignItems();
+      justify-content: space-around;
+
+      &--2 {
+        transform: translateY(1.5rem);
+      }
+
+      &--3 {
+        transform: translateY(3rem);
+      }
+
+      p {
+        color: $grayish-blue;
+        font-size: 0.8rem;
+      }
+
+      .dotted {
+        width: 100%;
+        height: 1rem;
+        margin-bottom: 0.7rem;
+        border-bottom: 0.2rem dotted $grayish-blue;
+      }
+    }
+  }
+
+  //FAQ SECTION
+  .faq-box {
+    width: 29rem;
+    margin: 4rem 0;
+    //margin-bottom: 3rem;
+
+    .content-box {
+      width: 100%;
+      padding: 1rem 0 0.5rem 0;
+      border-bottom: 1px solid $grayish-blue;
+      cursor: pointer;
+
+      &:hover h3 {
+        color: $soft-red;
+      }
+
+      &__question {
+        display: flex;
+        justify-content: space-between;
+
+        & h3 {
+          font-size: 1.1rem;
+          font-weight: 400;
+          margin-bottom: 1.5rem;
+          width: 90%;
+        }
+      }
+
+      & p {
+        font-size: 0.8rem;
+        color: $grayish-blue;
+      }
+    }
+  }
+
+  //FORM SECTION
+}
+
+.section--form {
+  background-color: $soft-blue;
+  color: $color-default;
+  padding: 2rem 0;
+  margin-bottom: 0;
+  //min-height: 20rem;
+
+  .form-content {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    min-height: 18rem;
 
     & p {
       font-size: 0.7rem;
       letter-spacing: 7px;
+      text-align: center;
+      //margin-top: 3rem;
     }
 
     & h2 {
@@ -258,152 +408,69 @@ body {
       max-width: 25rem;
       text-align: center;
     }
-
-    & form {
-      display: flex;
-    }
-
-    & input[type="email"] {
-      padding: 0.7rem 2rem;
-    }
-  }
-}
-
-.btn-group {
-  width: 80%;
-  margin: 2rem 0;
-  display: flex;
-  justify-content: center;
-  border-bottom: 0.5px solid $grayish-blue;
-
-  .features-btn {
-    border: none;
-    padding: 1.5rem 0;
-    flex: 0 1 12rem;
-    font-size: 0.8rem;
-    font-family: inherit;
-    font-weight: 400;
-    align-self: auto;
-    background-color: $color-default;
-    transition: all ease-in-out 0.2s;
-    cursor: pointer;
-    color: $grayish-blue;
-
-    &:hover {
-      color: $soft-red;
-    }
-
-    &--active {
-      color: $very-dark-blue;
-      border-bottom: 3px solid $soft-red;
-    }
-  }
-}
-
-.content {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-
-  &-img {
-    flex: 0 0 46%;
-
-    & img {
-      width: 100%;
-    }
   }
 
-  &-description {
-    flex: 0 0 43%;
-    align-self: center;
+  & .form {
+    display: flex;
+    width: 23rem;
 
-    h3 {
-      font-size: calc(#{0.6rem} + 1.2vw);
-      margin-bottom: 1rem;
-    }
+    & .email-input {
+      flex: 2 1 0%;
 
-    p {
-      font-size: calc(#{0.5rem} + 0.7vw);
-      color: $grayish-blue;
-      //max-width: 25rem;
-      margin-bottom: 1rem;
-    }
-  }
-}
-
-//DOWNLOAD SECTION
-.downloader {
-  margin-top: 3rem;
-  max-width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-template-rows: auto;
-  grid-row-gap: 1.5rem;
-  grid-column-gap: 2.5rem;
-
-  .download-content {
-    height: 19rem;
-    padding: 1rem 0;
-    border-radius: 0.4rem;
-    box-shadow: $shadow;
-    background-color: $color-default;
-    @include alignItems();
-    justify-content: space-around;
-
-    &--2 {
-      transform: translateY(1.5rem);
-    }
-
-    &--3 {
-      transform: translateY(3rem);
-    }
-
-    p {
-      color: $grayish-blue;
-      font-size: 0.8rem;
-    }
-
-    .dotted {
-      width: 100%;
-      height: 1rem;
-      margin-bottom: 0.7rem;
-      border-bottom: 0.2rem dotted $grayish-blue;
-    }
-  }
-}
-
-//FAQ SECTION
-.faq-box {
-  width: 29rem;
-  margin: 4rem 0;
-  //margin-bottom: 3rem;
-
-  .content-box {
-    width: 100%;
-    padding: 1rem 0 0.5rem 0;
-    border-bottom: 1px solid $grayish-blue;
-    cursor: pointer;
-
-    &:hover h3 {
-      color: $soft-red;
-    }
-
-    &__question {
-      display: flex;
-      justify-content: space-between;
-
-      & h3 {
-        font-size: 1.1rem;
-        font-weight: 400;
-        margin-bottom: 1.5rem;
+      p {
+        background-color: $soft-red;
         width: 90%;
+        padding: 0.4rem;
+        height: auto;
+        //font-family: ;
+        border-radius: 0 0 0.2rem 0.2rem;
+        //transition: translateY(-0.5rem);
       }
     }
+  }
 
-    & p {
-      font-size: 0.8rem;
-      color: $grayish-blue;
+  & input[type="email"] {
+    padding: 0.7rem 1rem;
+    width: 90%;
+    font-family: inherit;
+    border: none;
+    color: $grayish-blue;
+    border-radius: 0.3rem;
+    box-shadow: $shadow;
+    background-image: url(../src/images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: right 0.6rem center;
+  }
+
+  & input[type="submit"] {
+    padding: 0.7rem 0.8rem;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: $shadow;
+    color: $color-default;
+    background-color: $soft-red;
+    font-family: inherit;
+    align-self: flex-start;
+
+    //flex: 0 1 0%;
+    // align-self: flex-start;
+    &:hover {
+      background-color: $color-default;
+      outline: 2px solid $soft-red;
+      color: $soft-red;
     }
+  }
+}
+
+//Footer Section
+.footer {
+  background-color: $very-dark-blue;
+  padding: 2rem Min(10vw, 7rem);
+}
+
+.main-footer {
+  & svg {
+    color: $color-default;
   }
 }
 
