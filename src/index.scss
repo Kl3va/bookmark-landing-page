@@ -238,10 +238,34 @@ body {
   &--3 {
     margin: 8rem 0;
   }
-
+  //Form styling
   &--form {
     background-color: $soft-blue;
     color: $color-default;
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    & p {
+      font-size: 0.7rem;
+      letter-spacing: 7px;
+    }
+
+    & h2 {
+      font-weight: 500;
+      font-size: 1.8rem;
+      max-width: 25rem;
+      text-align: center;
+    }
+
+    & form {
+      display: flex;
+    }
+
+    & input[type="email"] {
+      padding: 0.7rem 2rem;
+    }
   }
 }
 
