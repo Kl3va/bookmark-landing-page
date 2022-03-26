@@ -469,8 +469,55 @@ body {
 }
 
 .main-footer {
+  display: flex;
+  gap: 3.5rem;
+
+  .footer-img {
+    flex: 1 1 0;
+
+    & img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .footer-links {
+    flex: 3 1 0;
+    display: flex;
+    gap: 1.7rem;
+    align-items: center;
+
+    & a {
+      display: block;
+      text-decoration: none;
+      color: $color-default;
+      text-transform: uppercase;
+      font-size: 0.6rem;
+      font-family: inherit;
+      letter-spacing: 0.1rem;
+      transition: color ease-out 0.2s;
+
+      &:hover {
+        color: $soft-red;
+      }
+    }
+  }
+
+  .footer-icons {
+    flex: 1 1 0;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+  }
+
   & svg {
     color: $color-default;
+    font-size: 1.1rem;
+    transition: color ease-out 0.2s;
+
+    &:hover {
+      color: $soft-red;
+    }
   }
 }
 
@@ -498,8 +545,10 @@ body {
 .svg {
   font-size: 1.5rem;
   color: $soft-blue;
+  transition: all ease-in 0.2s;
 
   &--active {
     color: $soft-red;
+    transform: rotate(-180deg);
   }
 }

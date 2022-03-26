@@ -9,14 +9,18 @@ const Footer = ({ logo, footerLink }) => {
         <div className="footer-img">
           <img src={logo} alt="logo" />
         </div>
-        <div className="footer-link">
-          {footerLink.map((link) => {
-            return <a href="#">{link}</a>;
+        <div className="footer-links">
+          {footerLink.map((link, index) => {
+            return (
+              <a key={index} href="#">
+                {link}
+              </a>
+            );
           })}
         </div>
         <div className="footer-icons">
-          <BsTwitter />
           <ImFacebook2 />
+          <BsTwitter />
         </div>
       </div>
     </footer>
