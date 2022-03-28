@@ -2,10 +2,19 @@ import React, { useState } from "react";
 
 const Form = ({ text, heading, placeholder, btnText, errorMessage }) => {
   const [email, setEmail] = useState("");
+  const [Error, setError] = useState(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email) {
+    const validEmail = new RegExp(
+      "^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$"
+    );
+    const emailValid = validEmail.test(email);
+
+    if (!emailValid) {
+      setError(false);
+    } else {
+      setError(true);
       setEmail("");
     }
   };
