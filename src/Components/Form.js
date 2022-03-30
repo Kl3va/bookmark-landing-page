@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Form = ({ text, heading, placeholder, btnText, errorMessage }) => {
   const [email, setEmail] = useState("");
-  const [Error, setError] = useState(true);
+  const [Error, setError] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,9 +12,9 @@ const Form = ({ text, heading, placeholder, btnText, errorMessage }) => {
     const emailValid = validEmail.test(email);
 
     if (!emailValid) {
-      setError(false);
-    } else {
       setError(true);
+    } else {
+      setError(false);
       setEmail("");
     }
   };
@@ -34,7 +34,7 @@ const Form = ({ text, heading, placeholder, btnText, errorMessage }) => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <p>hhvmhvt</p>
+            <p>Whoops, make sure it's an email</p>
           </div>
 
           <input type="submit" value={btnText} />
