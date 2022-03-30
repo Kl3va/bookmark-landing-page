@@ -395,10 +395,11 @@ body {
     justify-content: space-around;
     min-height: 18rem;
 
-    & p {
-      font-size: 0.5rem;
-      text-align: start;
-      //font-family: ;
+    & .text {
+      font-size: 0.7rem;
+      text-align: center;
+      letter-spacing: 5px;
+      font-family: inherit;
     }
 
     & h2 {
@@ -416,13 +417,15 @@ body {
     & .email-input {
       flex: 2 1 0%;
 
-      p {
+      .error {
         background-color: $soft-red;
         width: 90%;
         padding: 0.4rem;
         height: auto;
-        //font-family: ;
+        font-family: "Courier New", Courier, monospace;
         border-radius: 0 0 0.2rem 0.2rem;
+        text-align: left;
+        font-size: 0.6rem;
         //transition: translateY(-0.5rem);
       }
     }
@@ -439,7 +442,7 @@ body {
     background-image: url(../src/images/icon-error.svg);
     background-repeat: no-repeat;
     background-position: right 0.6rem center;
-    outline: 2px solid $soft-red;
+    // outline: 2px solid $soft-red;
   }
 
   & input[type="submit"] {
