@@ -1,5 +1,3 @@
 import React from "react";
 
-export const validEmail = new RegExp(
-  "^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$"
-);
+export let validEmail = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");

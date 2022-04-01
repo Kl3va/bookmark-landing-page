@@ -2,29 +2,33 @@ import React, { useState } from "react";
 import { validEmail } from "./test";
 
 const Form = ({ text, heading, placeholder, btnText, errorMessage }) => {
-  const [input, setInput] = useState({});
-  const [error, setError] = useState(true);
-  const [email, setEmail] = useState("");
+  //const [error, setError] = useState(false);
+  const [emailState, setEmailState] = useState({
+    email: "",
+    errorMessage: "",
+    isError: false,
+  });
 
   const handleChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-
-    setInput({ [name]: value });
+    setEmailState({ ...emailState, email: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const emailValid = validEmail.test(input.email);
-    //console.log(emailValid)
-
-    if (!emailValid) {
-      setError(false);
+    if (!validEmail.test(emailState.email)) {
+      setEmailState({
+        ...emailState,
+        errorMessage: "Whoops, make sure it's an email",
+        isError: true,
+      });
     } else {
-      setError(true);
-      setEmail(input);
-      // document.getElementById("email").value = "";
+      setEmailState({
+        ...emailState,
+        email: "",
+        errorMessage: "",
+        isError: false,
+      });
     }
   };
 
@@ -33,20 +37,22 @@ const Form = ({ text, heading, placeholder, btnText, errorMessage }) => {
       <div className="form-content">
         <p className="text">{text}</p>
         <h2>{heading}</h2>
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
           <div className="email-input">
             <input
               type="email"
               name="email"
               id="email"
               placeholder={placeholder}
-              value={email}
+              value={emailState.email}
               onChange={handleChange}
             />
-            {!error && <p className="error">Whoops, make sure it's an email</p>}
+            {emailState.isError && (
+              <p className="error">{emailState.errorMessage}</p>
+            )}
           </div>
 
-          <input type="submit" value={btnText} onSubmit={handleSubmit} />
+          <input type="submit" value={btnText} />
         </form>
       </div>
     </section>

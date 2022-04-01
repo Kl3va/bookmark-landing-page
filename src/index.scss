@@ -439,10 +439,15 @@ body {
     color: $grayish-blue;
     border-radius: 0.3rem;
     box-shadow: $shadow;
-    background-image: url(../src/images/icon-error.svg);
-    background-repeat: no-repeat;
-    background-position: right 0.6rem center;
+
     // outline: 2px solid $soft-red;
+
+    &:invalid {
+      outline: 2px solid $soft-red;
+      background-image: url(../src/images/icon-error.svg);
+      background-repeat: no-repeat;
+      background-position: right 0.6rem center;
+    }
   }
 
   & input[type="submit"] {
