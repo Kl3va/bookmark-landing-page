@@ -45,6 +45,7 @@ $padding-large: 0 1.6rem;
 }
 
 //BREAKPOINTS FOR RESPONSIVENESS
+$bp-largest: 62.5em; //1000px
 $bp-medium: 50em; //800px
 
 *,
@@ -82,6 +83,10 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  @media only screen and (max-width: $bp-largest) {
+    flex-direction: column;
+  }
 
   &__primary {
     max-width: 50%;
