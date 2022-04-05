@@ -1,5 +1,12 @@
 import React from "react";
-import { download, faqData, features, formData, footerData } from "./data";
+import {
+  download,
+  faqData,
+  features,
+  formData,
+  footerData,
+  sidebarData,
+} from "./data";
 
 //Components
 import Features from "./Components/Features";
@@ -8,6 +15,7 @@ import Download from "./Components/Download";
 import Faq from "./Components/Faq";
 import Form from "./Components/Form";
 import Footer from "./Components/Footer";
+import Sidebar from "./Components/Sidebar";
 
 function App() {
   return (
@@ -19,6 +27,7 @@ function App() {
         <Faq {...faqData} />
         <Form {...formData} />
       </main>
+      <Sidebar {...sidebarData} />
       <Footer {...footerData} />
     </>
   );
