@@ -15,6 +15,9 @@ import operaLogo from "../src/images/logo-opera.svg";
 //Image for footer logo
 import footerLogo from "../src/images/logo-bookmark-footer.svg";
 
+//Sidebar Logo
+import sidebarLogo from "../src/images/logo-bookmark-drop.svg";
+
 //iconClose
 import iconClose from "../src/images/icon-close.svg";
 
@@ -158,7 +161,7 @@ export const footerData = {
 
 //Sidebar
 export const sidebarData = {
-  logo: footerLogo,
+  logo: sidebarLogo,
   closeIcon: iconClose,
   links: [
     {

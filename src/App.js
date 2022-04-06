@@ -1,11 +1,11 @@
 import React from "react";
 import {
-  download,
   faqData,
   features,
   formData,
   footerData,
   sidebarData,
+  download,
 } from "./data";
 
 //Components
@@ -16,6 +16,7 @@ import Faq from "./Components/Faq";
 import Form from "./Components/Form";
 import Footer from "./Components/Footer";
 import Sidebar from "./Components/Sidebar";
+import Background from "./Components/Background";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Form {...formData} />
       </main>
       <Sidebar {...sidebarData} />
+      <Background />
       <Footer {...footerData} />
     </>
   );

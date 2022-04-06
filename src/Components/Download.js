@@ -4,6 +4,8 @@ import SecondaryHeader from "./SecondaryHeader";
 import Button from "./Button";
 
 const Download = ({ downloadContents }) => {
+  //const { downloadContents } = download;
+
   return (
     <section className="section">
       <SecondaryHeader h2={download.header} text={download.text} />

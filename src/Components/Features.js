@@ -4,7 +4,7 @@ import SecondaryHeader from "./SecondaryHeader";
 import Button from "./Button";
 
 const Features = ({ featuresTitle, featuresContents }) => {
-  // const { featuresTitle, featuresContents } = features;
+  //const { featuresTitle, featuresContents } = features;
 
   // const [contents, setContents] = useState(featuresContents);
   const [value, setValue] = useState(0);
