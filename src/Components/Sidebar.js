@@ -1,13 +1,16 @@
 import React from "react";
 import { BsTwitter } from "react-icons/bs";
 import { ImFacebook2 } from "react-icons/im";
+import { useGlobalContext } from "./context";
 
 const Sidebar = ({ logo, closeIcon, links, btnText }) => {
+  const { isSidebarOpen, closeSidebar } = useGlobalContext();
+
   return (
-    <aside className="sidebar">
+    <aside className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}>
       <div className="sidebar__svg">
         <img src={logo} alt="logo" />
-        <img src={closeIcon} alt="btn-close" />
+        <img src={closeIcon} alt="btn-close" onClick={closeSidebar} />
       </div>
       <ul className="sidebar__links">
         {links.map((link) => {

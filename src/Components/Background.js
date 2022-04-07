@@ -1,7 +1,17 @@
 import React from "react";
+import { useGlobalContext } from "./context";
 
 const Background = () => {
-  return <div className="navigation-background"></div>;
+  const { isSidebarOpen } = useGlobalContext();
+  return (
+    <aside
+      className={`${
+        isSidebarOpen
+          ? "navigation-background show-background"
+          : "navigation-background"
+      }`}
+    ></aside>
+  );
 };
 
 export default Background;
